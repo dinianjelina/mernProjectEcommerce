@@ -12,7 +12,7 @@ const ConfirmOrder = ({ history }) => {
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0);
 
-  const perShip = '₹' + 1000;
+  const perShip = 'Rp.' + 1000;
 
   const shippingCharges = subtotal > perShip ? 0 : 200;
 
@@ -67,7 +67,7 @@ const ConfirmOrder = ({ history }) => {
                     <img src={item.image} alt="Product" />
                     <Link to={`/product/${item.product}`}>{item.name}</Link>{' '}
                     <span>
-                      {item.quantity} X ₹{item.price} = <b>₹{item.price * item.quantity}</b>
+                      {item.quantity} X Rp.{item.price} = <b>Rp.{item.price * item.quantity}</b>
                     </span>
                   </div>
                 ))}
@@ -81,15 +81,15 @@ const ConfirmOrder = ({ history }) => {
             <div>
               <div>
                 <p>Subtotal:</p>
-                <span>₹{subtotal}</span>
+                <span>Rp.{subtotal}</span>
               </div>
               <div>
                 <p>Shipping Charges:</p>
-                <span>₹{shippingCharges}</span>
+                <span>Rp.{shippingCharges}</span>
               </div>
               <div>
                 <p>GST:</p>
-                <span>₹{tax}</span>
+                <span>Rp.{tax}</span>
               </div>
             </div>
 
@@ -97,7 +97,7 @@ const ConfirmOrder = ({ history }) => {
               <p>
                 <b>Total:</b>
               </p>
-              <span>₹{totalPrice}</span>
+              <span>Rp.{totalPrice}</span>
             </div>
 
             <button onClick={proceedToPayment}>Proceed To Payment</button>

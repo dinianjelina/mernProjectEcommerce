@@ -78,7 +78,7 @@ const OrderDetails = ({ match }) => {
                       <img src={item.image} alt="Product" />
                       <Link to={`/product/${item.product}`}>{item.name}</Link>{' '}
                       <span>
-                        {item.quantity} X ₹{item.price} = <b>₹{item.price * item.quantity}</b>
+                        {item.quantity} X Rp.{item.price} = <b>Rp.{item.price * item.quantity}</b>
                       </span>
                     </div>
                   ))}

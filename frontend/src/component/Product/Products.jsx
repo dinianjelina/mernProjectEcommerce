@@ -18,7 +18,7 @@ const Products = ({ match }) => {
   const alert = useAlert();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 999999]);
+  const [price, setPrice] = useState([0, 1000000000]);
   const [category, setCategory] = useState('');
   const [ratings, setRatings] = useState(0);
 
@@ -57,7 +57,7 @@ const Products = ({ match }) => {
 
           <div className="filterBox">
             <Typography>Price</Typography>
-            <Slider value={price} onChange={priceHandler} valueLabelDisplay="auto" aria-labelledby="range-slider" min={0} max={999999} />
+            <Slider value={price} onChange={priceHandler} valueLabelDisplay="auto" aria-labelledby="range-slider" min={0} max={1000000000} />
 
             <Typography>Categories</Typography>
             <ul className="categoryBox">
